@@ -10,8 +10,8 @@ export default function LoginScreen({ navigation }) {
 
   const login = () =>
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => Alert.alert("Logged in!"))
-      .catch((e) => Alert.alert("Error", e.message));
+      .then(() => alert("Logged in!"))
+      .catch((e) => alert("Error", e.message));
 
   return (
     <View style={{ flex: 1, justifyContent: "center", padding: 20 }}>
@@ -19,6 +19,8 @@ export default function LoginScreen({ navigation }) {
       <TextInput placeholder="Password" secureTextEntry onChangeText={setPassword} style={{ margin: 5, borderWidth: 1, padding: 8 }} />
       <Button title="Login" onPress={login} />
       <Button title="Go to Register" onPress={() => navigation.navigate("Register")} />
+      <Button title="Go to Info" onPress={() => navigation.navigate("Info")} />
+
     </View>
   );
 }

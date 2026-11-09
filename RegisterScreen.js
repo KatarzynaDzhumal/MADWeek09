@@ -10,8 +10,8 @@ export default function RegisterScreen({ navigation }) {
 
   const register = () =>
     createUserWithEmailAndPassword(auth, email, password)
-      .then(() => Alert.alert("Account created!"))
-      .catch((e) => Alert.alert("Error", e.message));
+      .then(() => alert("Account created!"))
+      .catch((e) => alert("Error", e.message));
 
   return (
     <View style={{ flex: 1, justifyContent: "center", padding: 20 }}>
